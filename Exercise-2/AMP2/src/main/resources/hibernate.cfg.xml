@@ -28,5 +28,8 @@
 
 		<mapping class="mscs.mum.edu.b.Publisher" />
 		<mapping class="mscs.mum.edu.b.Book" />
+
+		<mapping class="mscs.mum.edu.c.Course" />
+		<mapping class="mscs.mum.edu.c.Student" />
 	</session-factory>
 </hibernate-configuration>
