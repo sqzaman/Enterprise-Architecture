@@ -11,6 +11,7 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 
+
 public class AppEmpDept {
 	private static SessionFactory sessionFactory;
 
@@ -59,6 +60,25 @@ public class AppEmpDept {
 			session.persist(emp3);
 			
 			
+			tx.commit();
+		} catch (HibernateException e) {
+			tx.rollback();
+			e.printStackTrace();
+		} finally {
+			if (session != null)
+				session.close();
+		}
+		
+		try {
+
+			session = sessionFactory.openSession();
+			tx = session.beginTransaction();
+
+			// retrieve all persons
+			List<Employee> employees = session.createQuery("from Employee").list();
+			for (Employee emp : employees) {
+				System.out.println("Employee: " + emp.getName() + ", Department:" + emp.getDepartment().getName());
+			}
 			tx.commit();
 		} catch (HibernateException e) {
 			tx.rollback();
