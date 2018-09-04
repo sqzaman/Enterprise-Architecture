@@ -1,4 +1,4 @@
-package mscs.mum.edu;
+package mscs.mum.edu.a;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

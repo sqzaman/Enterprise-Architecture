@@ -1,4 +1,4 @@
-package mscs.mum.edu;
+package mscs.mum.edu.a;
 
 import java.util.List;
 
@@ -75,6 +75,7 @@ public class AppEmpDept {
 			tx = session.beginTransaction();
 
 			// retrieve all persons
+			@SuppressWarnings("unchecked")
 			List<Employee> employees = session.createQuery("from Employee").list();
 			for (Employee emp : employees) {
 				System.out.println("Employee: " + emp.getName() + ", Department:" + emp.getDepartment().getName());
