@@ -30,7 +30,7 @@ public class Application {
 			session = sessionFactory.openSession();
 			tx = session.beginTransaction();
 
-			// retrieve all persons
+			// retrieve all student
 			List<Student> students = session.createQuery("from Student").list();
 			for (Student s : students) {
 				System.out.println(s.getName());
