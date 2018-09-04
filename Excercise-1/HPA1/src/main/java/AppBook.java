@@ -33,7 +33,7 @@ public class AppBook {
     }
     public static void main(String[] args) throws Exception {
         setUp();
-
+        //Create books
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
 
@@ -53,12 +53,13 @@ public class AppBook {
             session.persist(book3);
             session.getTransaction().commit();
         }
+        // Load list of books
         try (Session session  = sessionFactory.openSession()) {
             session.beginTransaction();
             new AppBook().retrieveBooks(session);
             session.getTransaction().commit();
         }
-
+        // Load, Update and Delete a specific book
         try (Session session  = sessionFactory.openSession()) {
             session.beginTransaction();
             //Get book with id 1
@@ -76,7 +77,7 @@ public class AppBook {
             session.getTransaction().commit();
 
         }
-
+        // Load list of books
         try (Session session  = sessionFactory.openSession()) {
             session.beginTransaction();
             new AppBook().retrieveBooks(session);
@@ -85,9 +86,8 @@ public class AppBook {
         tearDown();
 
     }
-
+    // Retieve all books
     public void retrieveBooks(Session session){
-        // retieve all books
         @SuppressWarnings("unchecked")
         List<Book> bookList = session.createQuery("from Book").list();
         for (Book book : bookList) {
