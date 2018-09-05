@@ -15,6 +15,14 @@ public class Doctor {
 	public String getDoctortype() {
 		return doctortype;
 	}
+	
+	public Doctor(String doctortype, String firstname, String lastname) {
+		super();
+		this.doctortype = doctortype;
+		this.firstname = firstname;
+		this.lastname = lastname;
+	}
+
 	public void setDoctortype(String doctortype) {
 		this.doctortype = doctortype;
 	}

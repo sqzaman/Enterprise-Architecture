@@ -16,6 +16,13 @@ public class Appointment {
 	private Payment payment;
 	@OneToOne
 	private Doctor doctor;
+	
+	public Appointment(String appdate, Payment payment, Doctor doctor) {
+		super();
+		this.appdate = appdate;
+		this.payment = payment;
+		this.doctor = doctor;
+	}
 	public String getAppdate() {
 		return appdate;
 	}

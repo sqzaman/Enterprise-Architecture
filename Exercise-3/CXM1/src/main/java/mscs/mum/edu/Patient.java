@@ -13,6 +13,14 @@ public class Patient {
 	private String street;
 	private String zip;
 	private String city;
+	
+	public Patient(String name, String street, String zip, String city) {
+		super();
+		this.name = name;
+		this.street = street;
+		this.zip = zip;
+		this.city = city;
+	}
 	public String getName() {
 		return name;
 	}

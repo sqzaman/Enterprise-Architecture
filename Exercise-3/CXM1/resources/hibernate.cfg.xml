@@ -23,6 +23,6 @@
 
 		<!-- Mapping files -->
 
-		<mapping class="mscs.mum.edu.Car" />
+		<mapping class="mscs.mum.edu.App" />
 	</session-factory>
 </hibernate-configuration>
