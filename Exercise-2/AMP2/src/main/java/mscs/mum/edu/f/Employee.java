@@ -31,7 +31,7 @@ public class Employee {
 
     @ManyToOne
     @JoinColumn(name="room_number")
-   private Office office;
+    private Office office;
 
 
     public Employee() {
@@ -69,7 +69,4 @@ public class Employee {
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
-	
-	
-
 }
