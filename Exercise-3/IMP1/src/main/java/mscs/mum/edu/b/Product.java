@@ -1,14 +1,10 @@
 package mscs.mum.edu.b;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "products")
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy= InheritanceType.SINGLE_TABLE)
 public abstract class Product {
 	@Id
 	@GeneratedValue
