@@ -1,4 +1,4 @@
-package mscs.mum.edu.f;
+package mscs.mum.edu.a;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,25 +17,13 @@ public class Employee {
 	private long employeeNumber;
 	@Column(name = "employee_name")
 	private String name;
-    @ManyToOne
-    @JoinColumn(name = "department_id")
-    private Department department;
+	@ManyToOne
+	@JoinColumn(name = "department_id")
+	private Department department;
 
-    public Office getOffice() {
-        return office;
-    }
-
-    public void setOffice(Office office) {
-        this.office = office;
-    }
-
-    @ManyToOne
-    @JoinColumn(name="room_number")
-    private Office office;
-
-
-    public Employee() {
+	public Employee() {
 	}
+
 	/**
 	 * @param name
 	 * @param department
@@ -45,28 +33,28 @@ public class Employee {
 		this.department = department;
 	}
 
-    public Employee(String name, Department department, Office office) {
-        this.name = name;
-        this.department = department;
-        this.office = office;
-    }
-
-    public long getEmployeeNumber() {
+	public long getEmployeeNumber() {
 		return employeeNumber;
 	}
+
 	public void setEmployeeNumber(long employeeNumber) {
 		this.employeeNumber = employeeNumber;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public Department getDepartment() {
 		return department;
 	}
+
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
+
 }
