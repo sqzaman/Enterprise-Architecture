@@ -23,20 +23,14 @@
 
 		<!-- Mapping files -->
 
-		<mapping class="mscs.mum.edu.f.Employee" />
-		<mapping class="mscs.mum.edu.f.Department" />
-		<mapping class="mscs.mum.edu.f.Office" />
-		<mapping class="mscs.mum.edu.d.Customer" />
-		<mapping class="mscs.mum.edu.d.Reservation" />
-		<mapping class="mscs.mum.edu.e.Book" />
-		<mapping class="mscs.mum.edu.e.Customer" />
-		<mapping class="mscs.mum.edu.a.Employee" />
-		<mapping class="mscs.mum.edu.a.Department" />
-
-		<mapping class="mscs.mum.edu.b.Publisher" />
+		<mapping class="mscs.mum.edu.b.Product" />
+		<mapping class="mscs.mum.edu.b.Customer" />
+		<mapping class="mscs.mum.edu.b.Order" />
+		<mapping class="mscs.mum.edu.b.OrderLine" />
+		
 		<mapping class="mscs.mum.edu.b.Book" />
+		<mapping class="mscs.mum.edu.b.CD" />
+		<mapping class="mscs.mum.edu.b.DVD" />
 
-		<mapping class="mscs.mum.edu.c.Course" />
-		<mapping class="mscs.mum.edu.c.Student" />
 	</session-factory>
 </hibernate-configuration>
