@@ -16,12 +16,22 @@ public class Appointment {
 	private Payment payment;
 	@OneToOne
 	private Doctor doctor;
+	@OneToOne
+	private Patient patient;
 	
-	public Appointment(String appdate, Payment payment, Doctor doctor) {
+	
+	public Appointment(String appdate, Payment payment, Doctor doctor, Patient patient) {
 		super();
 		this.appdate = appdate;
 		this.payment = payment;
 		this.doctor = doctor;
+		this.patient = patient;
+	}
+	public Patient getPatient() {
+		return patient;
+	}
+	public void setPatient(Patient patient) {
+		this.patient = patient;
 	}
 	public String getAppdate() {
 		return appdate;
