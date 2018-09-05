@@ -28,6 +28,13 @@
 		<mapping class="mscs.mum.edu.a.OrderLine" />
 		<mapping class="mscs.mum.edu.a.Order" />
 		<mapping class="mscs.mum.edu.a.Customer" />
+		<mapping class="mscs.mum.edu.b.Product" />
+		<mapping class="mscs.mum.edu.b.Customer" />
+		<mapping class="mscs.mum.edu.b.Order" />
+		<mapping class="mscs.mum.edu.b.OrderLine" />
 
+		<mapping class="mscs.mum.edu.b.Book" />
+		<mapping class="mscs.mum.edu.b.CD" />
+		<mapping class="mscs.mum.edu.b.DVD" />
 	</session-factory>
 </hibernate-configuration>
