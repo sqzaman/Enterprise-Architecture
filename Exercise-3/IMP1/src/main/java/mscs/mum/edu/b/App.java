@@ -69,8 +69,8 @@ public class App
 			book1.setDescription("Academic book description");
 			
 			Book book2 = new Book("Book 2");
-			book1.setName("Academic book 2");
-			book1.setDescription("Academic book2 description");
+			book2.setName("Academic book 2");
+			book2.setDescription("Academic book2 description");
 			
 			session.persist(book1);
 			session.persist(book2);
