@@ -10,8 +10,6 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-import mscs.mum.edu.a.Department;
-import mscs.mum.edu.a.Employee;
 
 public class AppBookPublisher {
 	private static SessionFactory sessionFactory;
