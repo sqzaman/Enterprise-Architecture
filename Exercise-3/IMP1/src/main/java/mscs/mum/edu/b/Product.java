@@ -11,12 +11,15 @@ import javax.persistence.DiscriminatorType;
 
 @Entity
 @Table(name = "products")
+/*
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(
 		 name="product_type",
 		 discriminatorType=DiscriminatorType.STRING
 		)
+		*/
 //@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance( strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Product {
 	@Id
 	@GeneratedValue

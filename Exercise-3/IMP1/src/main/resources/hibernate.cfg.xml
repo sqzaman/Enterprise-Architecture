@@ -23,12 +23,12 @@
 
 		<!-- Mapping files -->
 
-
+<!--
 		<mapping class="mscs.mum.edu.a.Product" />
 		<mapping class="mscs.mum.edu.a.OrderLine" />
 		<mapping class="mscs.mum.edu.a.Order" />
 		<mapping class="mscs.mum.edu.a.Customer" />
-		
+-->		
 		<mapping class="mscs.mum.edu.b.Product" />
 		<mapping class="mscs.mum.edu.b.Customer" />
 		<mapping class="mscs.mum.edu.b.Order" />
