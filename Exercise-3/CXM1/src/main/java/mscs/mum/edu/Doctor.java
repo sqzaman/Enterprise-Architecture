@@ -2,27 +2,38 @@ package mscs.mum.edu;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "doctor")
 public class Doctor {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	
 	private String doctortype;
 	private String firstname;
 	private String lastname;
-	public String getDoctortype() {
-		return doctortype;
-	}
-	
+	/**
+	 * @param doctortype
+	 * @param firstname
+	 * @param lastname
+	 */
 	public Doctor(String doctortype, String firstname, String lastname) {
-		super();
 		this.doctortype = doctortype;
 		this.firstname = firstname;
 		this.lastname = lastname;
 	}
-
+	/**
+	 * 
+	 */
+	public Doctor() {
+	}
+	public String getDoctortype() {
+		return doctortype;
+	}
 	public void setDoctortype(String doctortype) {
 		this.doctortype = doctortype;
 	}
@@ -38,5 +49,9 @@ public class Doctor {
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
+	public int getId() {
+		return id;
+	}
 	
+
 }

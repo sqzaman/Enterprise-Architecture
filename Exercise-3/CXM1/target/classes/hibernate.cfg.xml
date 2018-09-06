@@ -4,12 +4,12 @@
 
 <hibernate-configuration>
 	<session-factory>
-        <!-- MySQL DB running on localhost -->
-        <property name="connection.url">jdbc:mysql://localhost:3306/cs544?useSSL=false</property>
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.username">new</property>
-        <property name="connection.password">root</property>
-        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<!-- MySQL DB running on localhost -->
+		<property name="connection.url">jdbc:mysql://localhost/cs544</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password"></property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
 		<!-- Use the Hibernate built-in pool for tests. -->
 		<property name="connection.pool_size">1</property>
@@ -23,6 +23,16 @@
 
 		<!-- Mapping files -->
 
-		<mapping class="mscs.mum.edu.App" />
+		<mapping class="mscs.mum.edu.Patient" />
+		<mapping class="mscs.mum.edu.Doctor" />
+		<mapping class="mscs.mum.edu.Appointment" />
+<!--
+		
+
+		<mapping class="mscs.mum.edu.Payment" />
+		
+-->
+
+
 	</session-factory>
 </hibernate-configuration>
