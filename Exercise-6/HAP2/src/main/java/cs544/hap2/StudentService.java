@@ -12,10 +12,10 @@ public class StudentService {
 	}
 
 	public Student getStudent(long studentid) {
-		Transaction tx = sf.getCurrentSession().beginTransaction();
+		//Transaction tx = sf.getCurrentSession().beginTransaction();
 		Student st = studentdao.get(studentid);
-		Hibernate.initialize(st.getCourselist());
-		tx.commit();
+		//Hibernate.initialize(st.getCourselist());
+		//tx.commit();
 		return st;
 
 	}
