@@ -27,6 +27,7 @@
 		
         <!-- Mapping files -->
         <mapping /> <!-- TODO map classes -->
+        <mapping class="cs544.hap2.Student" />
 
     </session-factory>
 </hibernate-configuration>
