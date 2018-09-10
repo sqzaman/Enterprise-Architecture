@@ -6,7 +6,7 @@
     <session-factory>
         <!-- HSQL DB running on localhost -->
         <property name="connection.url">jdbc:mysql://localhost/cs544</property>
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.username">root</property>
         <property name="connection.password"></property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
@@ -18,6 +18,7 @@
         <property name="show_sql">true</property>
         <property name="use_sql_comments">true</property>
         <property name="hibernate.format_sql">false</property>
+        <property name="current_session_context_class">thread</property>
 		
         <!-- Always drop and recreate the database schema on startup -->
         <property name="hbm2ddl.auto">create</property>
@@ -26,7 +27,7 @@
         <property name="current_session_context_class">thread</property>
 		
         <!-- Mapping files -->
-        <mapping /> <!-- TODO map classes -->
+        <mapping class="cs544.hap2.Course" /> <!-- TODO map classes -->
         <mapping class="cs544.hap2.Student" />
 
     </session-factory>

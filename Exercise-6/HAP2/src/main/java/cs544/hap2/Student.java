@@ -3,11 +3,23 @@ package cs544.hap2;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.JoinColumn;
+
+@Entity
+@Table(name = "students")
 public class Student {
+	@Id
 	private long studentid;
 	private String firstname;
 	private String lastname;
-	
+
+	@OneToMany
+	@JoinTable(name = "student_course", joinColumns = @JoinColumn(name = "student_id"), inverseJoinColumns = @JoinColumn(name = "course_id"))
 	private Collection<Course> courselist = new ArrayList<Course>();
 
 	public Student() {

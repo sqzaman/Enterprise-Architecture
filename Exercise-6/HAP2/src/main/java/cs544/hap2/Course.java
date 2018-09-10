@@ -1,6 +1,13 @@
 package cs544.hap2;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="courses")
 public class Course {
+	@Id
 	private long coursenumber;
 	private String name;
 	private String grade;
