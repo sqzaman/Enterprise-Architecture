@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
 	public static void main(String[] args) {
 		// IProductService productService = new ProductService();
-		ApplicationContext context = new ClassPathXmlApplicationContext("springconfig.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("springconfig2.xml");
 		IProductService productService = context.getBean("productService", IProductService.class);
 
 		Product product1 = productService.getProduct(423);
