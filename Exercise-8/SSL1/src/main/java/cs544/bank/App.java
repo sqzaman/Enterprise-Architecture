@@ -18,10 +18,8 @@ public class App {
 		//IAccountService accountService = new AccountService();
 		
 		// For SSL1
-		//ApplicationContext context = new  ClassPathXmlApplicationContext("springconfig.xml");
-		
-		// For SSL2
-		ApplicationContext context = new  ClassPathXmlApplicationContext("springserviceconfig.xml");
+		ApplicationContext context = new  ClassPathXmlApplicationContext("springconfig.xml");
+
 		
 		
 		IAccountService accountService = context.getBean("accountService", IAccountService.class);
