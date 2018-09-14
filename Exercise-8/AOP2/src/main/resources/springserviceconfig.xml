@@ -18,8 +18,10 @@
 	<bean id="accountDAO" class="cs544.bank.dao.AccountDAO" />
 	<bean id="currencyConverter" class="cs544.bank.service.CurrencyConverter" />
 	<bean id="jmsSender" class="cs544.bank.jms.JMSSender" />
-	<bean id="logger" class="cs544.bank.logging.Logger" />
+	
 
-	<bean id="theLoggerAdvice" class="cs544.bank.aop.advice.LogAdvice" />
-
+	<bean id="theLoggerAdvice" class="cs544.bank.aop.advice.LogAdvice" >
+		<constructor-arg ref="logger" />	
+	</bean>
+<bean id="logger" class="cs544.bank.logging.Logger" />
 </beans>
