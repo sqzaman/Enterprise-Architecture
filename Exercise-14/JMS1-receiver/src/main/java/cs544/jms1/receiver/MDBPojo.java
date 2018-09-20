@@ -1,7 +1,6 @@
 package cs544.jms1.receiver;
 
 import javax.jms.*;
-import cs544.exercise24_1.sender.Person;
 
 public class MDBPojo implements MessageListener {
 
