@@ -89,6 +89,12 @@ public class ShoppingList {
 		}
 		return this.item;
 	}
+	
+	
+
+	public void setItem(Collection<Item> item) {
+		this.item = item;
+	}
 
 	public String toString() {
 		String result = "";

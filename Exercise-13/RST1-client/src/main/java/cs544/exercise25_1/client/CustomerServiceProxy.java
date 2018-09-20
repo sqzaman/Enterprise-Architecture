@@ -13,7 +13,9 @@ public class CustomerServiceProxy implements ICustomerService {
 	private static final String customerURL = "http://localhost:8080/RST1/rest/customer/{customerNumber}";
 
 
-
+	public CustomerServiceProxy(){
+		
+	}
 	private RestTemplate restTemplate;
 
 	public void setRestTemplate(RestTemplate restTemplate) {

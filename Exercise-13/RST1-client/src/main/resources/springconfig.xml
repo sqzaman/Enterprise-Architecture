@@ -12,7 +12,9 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
        
-	<!-- TODO customerServiceProxy -->
+	<bean id="customerServiceProxy" class="cs544.exercise25_1.client.CustomerServiceProxy">
+<property name="restTemplate" ref="restTemplate"/>
+</bean>
 	
 	<bean id="shopListServiceProxy" class="cs544.exercise25_1.client.ShopListServiceProxy">
 		<property name="restTemplate" ref="restTemplate"/>
